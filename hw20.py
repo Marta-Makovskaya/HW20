@@ -70,7 +70,7 @@ def add_grade():
     course_id = request.json.get('course_id')
     grade = request.json.get('grade')
 
-    print(f"Received - student_id: {student_id}, course_id: {course_id}, grade: {grade}")  # Логирование
+    print(f"Received - student_id: {student_id}, course_id: {course_id}, grade: {grade}")  
 
     if student_id is None or course_id is None or grade is None:
         return jsonify({"error": "Все поля должны быть заполнены."}), 400
